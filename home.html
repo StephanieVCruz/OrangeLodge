@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OrangeLodge - Find the nearest hotels around your con!</title>
+
+<!--CSS Styles-->
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/materialize.css">
+<link rel="stylesheet" href="css/map.css">
+<link rel="stylesheet" href="css/styles.css">
+
+
+<!--End CSS Styles-->
+
+
+</head>
+
+<body class="grey darken-3">
+
+<!--//Content begins here//-->
+
+<div class="container">
+  <br>
+  <br>
+  <br>
+<!--//Logo//-->
+<div class="row">
+  <img class="responsive-img col s10 offset-s1 orange-logo" src="images/logo.svg" alt="OrangeLodge Logo" />
+</div>
+
+<div class="row">
+  <h2 class="flow-text white-text center-align">Find the best value hotel for your Florida anime con!</h2>
+</div>
+
+<div class="row">
+  <h2 class="flow-text white-text center-align">Pick which convention you're going to!</h2>
+</div>
+
+<!--//Convention Cards-->
+<form id="conventionForm" class="center-align">
+<div class="row">
+    <div class="col s12 m4 l4">
+      <input name="convention" type="radio" id="megacon" value="megacon" />
+      <label for="megacon"><img class="responsive-img con-logo" src="images/megacon.png"/></label>
+    </div>
+
+    <div class="col s12 m4 l4">
+      <input name="convention" type="radio" id="supercon" value="supercon" />
+      <label for="supercon"><img  class="responsive-img con-logo" src="images/supercon.png"/></label>
+    </div>
+
+    <div class="col s12 m4 l4">
+      <input name="convention" type="radio" id="metrocon" value="metrocon" />
+      <label for="metrocon"><img  class="responsive-img con-logo" src="images/metrocon.png"/></label>
+    </div>
+
+</div>
+
+<!--//Form//-->
+
+<div class="row">
+  <h2 class="flow-text white-text">Tell us a bit more about your visit...</h2>
+</div>
+
+<div class="row">
+
+<div class="row">
+<div class="white-text col s12 m4 l4">
+
+How many adults will be staying?
+  <br>
+  <input name="adults" type="radio" id="adults1" value="1" />
+  <label for="adults1">1</label>
+  <br>
+  <input name="adults" type="radio" id="adults2" value="2" />
+  <label for="adults2">2</label>
+  <br>
+  <input name="adults" type="radio" id="adults3" value="3" />
+  <label for="adults3">3</label>
+  <br>
+  <input name="adults" type="radio" id="adults4" value="4" />
+  <label for="adults4">4</label>
+
+  </div>
+
+  <div class="white-text col s12 m4 l4">
+    How many children will be staying?
+      <br>
+      <input name="children" type="radio" id="children0" value="0" />
+      <label for="children0">0</label>
+      <br>
+      <input name="children" type="radio" id="children1" value="1" />
+      <label for="children1">1</label>
+      <br>
+      <input name="children" type="radio" id="children2" value="2" />
+      <label for="children2">2</label>
+  </div>
+
+    <div class="white-text col s12 m4 l4">
+      How many rooms do you need?
+        <br>
+        <input name="rooms" type="radio" id="rooms1" value="1" />
+        <label for="rooms1">1</label>
+        <br>
+        <input name="rooms" type="radio" id="rooms2" value="2" />
+        <label for="rooms2">2</label>
+      </div>
+</div>
+
+      <p>
+      <div class="row">
+        <div id="warning"></div>
+      </div>
+    </p>
+  </form>
+</div>
+
+<div class="row center-align">
+<a class="waves-effect waves-light btn center-align section scrollspy orange darken-2" id="findrate" href="#statusmessage">Find your hotel
+    <i class="material-icons left center-align">hotel</i>
+</a>
+</div>
+
+<div id="preloader" class="row center-align flow-text white-text">
+
+</a>
+</div>
+
+<div class="row">
+<div class="flow-text white-text center-align section scrollspy" id="statusmessage"></div>
+<div class="white-text center-align" id="name"></div>
+<div class="white-text center-align" id="stars"></div>
+<div class="white-text center-align" id="ratepernight"></div>
+<div class="white-text center-align" id="total"></div>
+<div class="white-text center-align" id="saving"></div>
+
+<div class="white-text center-align" id="hotellink"></div>
+
+<div id="map-container" class="center-align"><div id="map" class="center-align"></div></div>
+
+
+
+</div>
+
+<!--//Google Maps Container//-->
+
+</div>
+
+<!--Scripts-->
+<div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="scripts/materialize.js"></script>
+<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKrmOIrZ-nlRuJqN_ePUKSMnma60sWPLk&callback=initMap">
+</script>
+<script type="text/javascript" src="scripts/ajax.js"></script>
+<script type="text/javascript" src="scripts/map.js"></script>
+<script type="text/javascript" src="scripts/init.js"></script>
+</div>
+
+
+
+</body>
+</html>
